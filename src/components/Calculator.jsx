@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
 
 export function Calculator() {
-  //declare state below [first,second] first is state name, setDisplay is a function used to change it
   const [display, setDisplay] = useState(0)
-  //simple Defined Click Function on Clear Button
-
   const [firstNumber, setFirstNumber] = useState(null)
   const [secondNumber, setSecondNumber] = useState(null)
   const [operator, setOperator] = useState(null)
   const [result, setResult] = useState(null)
-  //const [showEquals, setShowEquals] = useState(false)
+
   //////////////////////////////////////////////////////////////////////
 
   function clickClearButton() {
@@ -22,7 +19,6 @@ export function Calculator() {
   function clickedDigit(event) {
     if (result !== null) {
       clickClearButton()
-      //console.log('huh')
     }
     if (operator === null) {
       if (display === 0) {
@@ -69,7 +65,6 @@ export function Calculator() {
     } else {
       return
     }
-    //setShowEquals(true)
   }
 
   //////////////////////////////////////////////////////////////////////
